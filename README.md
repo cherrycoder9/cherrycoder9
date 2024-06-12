@@ -1,5 +1,11 @@
-## Hi there 👋
+***
+Developers should be pirates, not masons.
+***
 
+I don't check emails frequently, so for personal inquiries, please leave a message in the [GitHub Issues](https://github.com/cherrycoder9/cherrycoder9/issues). If you need to have a private conversation, you can leave your email or contact information in the Issue, or reach out to me on Telegram.
+
+- **Telegram**: [https://t.me/monadpattern](https://t.me/monadpattern)
+- 
 <!--
 **cherrycoder9/cherrycoder9** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
