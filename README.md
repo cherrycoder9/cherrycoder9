@@ -4,7 +4,8 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 
 ***
 Developers should be pirates, not masons.  
-Small and efficient modules, enterprises, and local governance.
+Small and efficient modules, enterprises, and local governance.  
+A few decide on war, but many suffer its consequences.  
 
 <!--
 **cherrycoder9/cherrycoder9** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
