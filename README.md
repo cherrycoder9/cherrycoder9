@@ -21,7 +21,7 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 - [ ] Own a factory to produce bespoke embedded systems
 
 ***
-🏴‍☠️ Developers should be pirates or explorers, not masons.  
+🧭 Developers should be pirates or explorers, not masons.  
 🏗️ Small and efficient modules, enterprises, and local governance.  
 ⚔️ A few decide on war, but many suffer its consequences.  
 
