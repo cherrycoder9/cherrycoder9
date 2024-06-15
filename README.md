@@ -9,6 +9,10 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 - [ ] Clone 5 high-profit products as a solo developer
 - [ ] Clone 10 high-profit products as a solo developer
 - [ ] Clone 15 high-profit products as a solo developer
+- [ ] Achieve $300 in monthly revenue from launched products
+- [ ] Achieve $1,000 in monthly revenue from launched products
+- [ ] Achieve $3,000 in monthly revenue from launched products
+- [ ] Achieve $10,000 in monthly revenue from launched products
 - [ ] Join a trendy startup and reach a salary of $40,000
 - [ ] Join a trendy startup and reach a salary of $55,000
 - [ ] Join a trendy startup and reach a salary of $70,000
