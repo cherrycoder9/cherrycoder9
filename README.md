@@ -11,7 +11,7 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 - **Telegram**: [https://t.me/monadpattern](https://t.me/monadpattern)
 
 ***
-🏴‍☠️ Developers should be pirates, not masons.  
+🏴‍☠️ Developers should be pirates or explorers, not masons. 
 🏗️ Small and efficient modules, enterprises, and local governance.  
 ⚔️ A few decide on war, but many suffer its consequences.  
 
