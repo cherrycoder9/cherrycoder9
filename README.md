@@ -1,6 +1,7 @@
 I don't check emails frequently, so for personal inquiries, please leave a message in the [GitHub Issues](https://github.com/cherrycoder9/cherrycoder9/issues). If you need to have a private conversation, you can leave your email or contact information in the Issue, or reach out to me on Telegram.
 
 - **Telegram**: [https://t.me/monadpattern](https://t.me/monadpattern)
+- **Email**: [cherrycoder9@gmail.com](mailto:cherrycoder9@gmail.com)
 
 ***
 ### One-Time Canvas, Own Your Colors
