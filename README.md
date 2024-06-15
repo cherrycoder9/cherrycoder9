@@ -1,4 +1,9 @@
-## One-Time Canvas, Own Your Colors
+I don't check emails frequently, so for personal inquiries, please leave a message in the [GitHub Issues](https://github.com/cherrycoder9/cherrycoder9/issues). If you need to have a private conversation, you can leave your email or contact information in the Issue, or reach out to me on Telegram.
+
+- **Telegram**: [https://t.me/monadpattern](https://t.me/monadpattern)
+
+***
+### One-Time Canvas, Own Your Colors
 - [ ] Code in the cool breeze on the hills of San Diego
 - [ ] Pursue common goals with a small, crack team of 3-4 people
 - [ ] Clone 5 high-profit products as a solo developer
@@ -14,11 +19,6 @@
 - [ ] Create a game with ML, survival of the fittest, and game theory
 - [ ] Develop an app that reaches 1 million downloads
 - [ ] Own a factory to produce bespoke embedded systems
-
-***
-I don't check emails frequently, so for personal inquiries, please leave a message in the [GitHub Issues](https://github.com/cherrycoder9/cherrycoder9/issues). If you need to have a private conversation, you can leave your email or contact information in the Issue, or reach out to me on Telegram.
-
-- **Telegram**: [https://t.me/monadpattern](https://t.me/monadpattern)
 
 ***
 🏴‍☠️ Developers should be pirates or explorers, not masons.  
