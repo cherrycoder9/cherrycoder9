@@ -1,3 +1,5 @@
+[![wakatime](https://wakatime.com/badge/user/358d3109-87a7-4551-8031-898ba083ec52.svg)](https://wakatime.com/@358d3109-87a7-4551-8031-898ba083ec52)
+---
 I don't check emails frequently, so for personal inquiries, please leave a message in the [GitHub Issues](https://github.com/cherrycoder9/cherrycoder9/issues). If you need to have a private conversation, you can leave your email or contact information in the Issue, or reach out to me on Telegram.
 
 - **Telegram**: [https://t.me/monadpattern](https://t.me/monadpattern)
@@ -88,3 +90,5 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 ---
 [![cherrycoder9's GitHub stats](https://github-readme-stats.vercel.app/api?username=cherrycoder9&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cherrycoder9&layout=compact&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+![WakaTime Stats](https://github-readme-stats.vercel.app/api/wakatime?username=cherrycoder9&layout=compact)
+
