@@ -31,6 +31,7 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 ### 🌴 Life Goals
 - [ ] Code in the cool breeze on the hills of San Diego
 - [ ] Pursue common goals with a small, crack team of 3-4 people
+- [ ] Graduate with a Bachelor's degree in Computer Science
 - [ ] Earn a Master's degree in Computer Science
 
 ### 🚀 Solo Developer Milestones
