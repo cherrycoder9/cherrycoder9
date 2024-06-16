@@ -21,7 +21,7 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 - [ ] Found a small startup and achieve a net profit of $300,000
 - [ ] Found a small startup and achieve a net profit of $400,000
 - [ ] Develop and launch my own unique cryptocurrency
-- [ ] Create a game with ML, survival of the fittest, and game theory
+- [ ] Create a game with machine learning, survival of the fittest, and game theory, including a legal system
 - [ ] Develop an app that reaches 1 million downloads
 - [ ] Own a factory to produce bespoke embedded systems
 
