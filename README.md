@@ -27,11 +27,17 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 ### 🌴 Life Goals
 - [ ] 🌬️ Code in the cool breeze on the hills of San Diego
 - [ ] 👥 Pursue common goals with a small, crack team of 3-4 people
+- [ ] 🎓 Earn a Master's degree in Computer Science
 
 ### 🚀 Solo Developer Milestones
 - [ ] 💻 Clone 5 high-profit products as a solo developer
 - [ ] 💻 Clone 10 high-profit products as a solo developer
 - [ ] 💻 Clone 15 high-profit products as a solo developer
+
+### 🏆 Hackathon Participation
+- [ ] 🎯 Participate in 5 hackathons
+- [ ] 🎯 Participate in 10 hackathons
+- [ ] 🎯 Participate in 15 hackathons
 
 ### 💸 Revenue Targets
 - [ ] 💵 Achieve $300 in monthly revenue from launched products
