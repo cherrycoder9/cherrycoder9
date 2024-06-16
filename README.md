@@ -78,3 +78,7 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 - Small and efficient modules, enterprises, and local governance.  
 - A few decide on war, but many suffer its consequences.  
 - The time has come to experiment with new forms of governance.
+
+---
+[![cherrycoder9's GitHub stats](https://github-readme-stats.vercel.app/api?username=cherrycoder9&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=cherrycoder9&layout=compact&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
