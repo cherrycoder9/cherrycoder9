@@ -55,6 +55,11 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 - [ ] 📱 Develop an app that reaches 1 million downloads
 - [ ] 🏭 Own a factory to produce bespoke embedded systems
 
+### 🌟 Open Source Contributions
+- [ ] 🌍 Contribute to 10+ open source projects
+- [ ] 🌍 Contribute to 20+ open source projects
+- [ ] 🌍 Contribute to 30+ open source projects
+
 ---
 🧭 Developers should be pirates or explorers, not masons.  
 🏗️ Small and efficient modules, enterprises, and local governance.  
