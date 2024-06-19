@@ -49,6 +49,11 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 - [ ] Clone 10 high-profit products as a solo developer
 - [ ] Clone 15 high-profit products as a solo developer
 
+### ⭐ GitHub Star Goals
+- [ ] Receive 30 stars on GitHub
+- [ ] Receive 100 stars on GitHub
+- [ ] Receive 300 stars on GitHub
+
 ### 🏆 Hackathon Participation
 
 - [ ] Participate in 5 hackathons
