@@ -40,6 +40,7 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white)
 ![CircleCI](https://img.shields.io/badge/CircleCI-343434?style=for-the-badge&logo=circleci&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-623CE4?style=for-the-badge&logo=terraform&logoColor=white)
+![Bevy](https://img.shields.io/badge/Bevy-004AA3?style=for-the-badge&logo=bevy&logoColor=white)
 
 ---
 
