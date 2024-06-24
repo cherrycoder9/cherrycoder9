@@ -1,4 +1,3 @@
-#
 [![wakatime](https://wakatime.com/badge/user/358d3109-87a7-4551-8031-898ba083ec52.svg)](https://wakatime.com/@358d3109-87a7-4551-8031-898ba083ec52)
 
 ---
