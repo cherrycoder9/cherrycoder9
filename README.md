@@ -116,7 +116,7 @@ I don't check emails frequently, so for personal inquiries, please leave a messa
 
 ---
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://github-readme-stats.vercel.app/api?username=cherrycoder9&show_icons=true&theme=radical" alt="cherrycoder9's GitHub stats" style="height: 200px;">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cherrycoder9&layout=compact&theme=radical" alt="Top Langs" style="height: 200px;">
+  <img src="https://github-readme-stats.vercel.app/api?username=cherrycoder9&show_icons=true&theme=radical" alt="cherrycoder9's GitHub stats" style="height: 170px;">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=cherrycoder9&layout=compact&theme=radical" alt="Top Langs" style="height: 170px;">
 </div>
 
