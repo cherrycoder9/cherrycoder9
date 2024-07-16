@@ -1,0 +1,44 @@
+name: trivy
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  schedule:
+    - cron: '15 11 * * 2'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+    name: Build
+    runs-on: "ubuntu-20.04"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build an image from Dockerfile
+        run: |
+          docker build -t my-organization/my-app:${{ github.sha }} .
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'my-organization/my-app:${{ github.sha }}'
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          severity: 'CRITICAL,HIGH'
+
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: 'trivy-results.sarif'
