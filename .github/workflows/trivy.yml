@@ -12,28 +12,18 @@ permissions:
   contents: read
 
 jobs:
-  build:
-    permissions:
-      contents: read
-      security-events: write
-      actions: read
-    name: Build
-    runs-on: "ubuntu-20.04"
+  scan:
+    name: Trivy scan
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
-
-      - name: Build an image from Dockerfile
-        run: |
-          docker build -t my-organization/my-app:${{ github.sha }} .
-
-      - name: Run Trivy vulnerability scanner
+      - name: Set up Trivy
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'my-organization/my-app:${{ github.sha }}'
+          scan-type: 'fs'
+          path: '.'
           format: 'sarif'
           output: 'trivy-results.sarif'
           severity: 'CRITICAL,HIGH'
