@@ -64,10 +64,15 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts/*'  # Use your required Node.js version
+          node-version: 'lts/*'  # Use the latest LTS version
 
       - name: Install Node.js dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Setup Pages
         id: pages
