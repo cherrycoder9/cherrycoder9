@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{ .Site.Title }}</title>
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
 </head>
 
 <body>
-    <h1>Welcome to {{ .Site.Title }}</h1>
+    <h1>{{ .Title }}</h1>
     <ul>
-        {{ range .Site.RegularPages }}
+        {{ range .Pages }}
         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
         {{ end }}
     </ul>
