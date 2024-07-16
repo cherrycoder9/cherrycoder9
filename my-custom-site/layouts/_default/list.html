@@ -8,9 +8,11 @@
 
 <body>
     <h1>{{ .Title }}</h1>
-    <div>
-        {{ .Content }}
-    </div>
+    <ul>
+        {{ range .Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
 </body>
 
 </html>
