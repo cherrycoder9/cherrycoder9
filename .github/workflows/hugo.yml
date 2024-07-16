@@ -33,46 +33,23 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ${{ runner.tool_cache }}/hugo
-          key: ${{ runner.os }}-hugo-${{ env.HUGO_VERSION }}
+          key: ${{ runner.os }}-hugo-${{ env.HUGO_VERSION }}-extended
           restore-keys: |
             ${{ runner.os }}-hugo-
 
       - name: Install Hugo CLI
         run: |
-          if [ ! -d "${{ runner.tool_cache }}/hugo/${{ env.HUGO_VERSION }}" ]; then
+          if [ ! -d "${{ runner.tool_cache }}/hugo/${{ env.HUGO_VERSION }}-extended" ]; then
             wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.deb \
             && sudo dpkg -i ${{ runner.temp }}/hugo.deb \
-            && mkdir -p ${{ runner.tool_cache }}/hugo/${{ env.HUGO_VERSION }} \
-            && mv /usr/local/bin/hugo ${{ runner.tool_cache }}/hugo/${{ env.HUGO_VERSION }}/
+            && mkdir -p ${{ runner.tool_cache }}/hugo/${{ env.HUGO_VERSION }}-extended \
+            && mv /usr/local/bin/hugo ${{ runner.tool_cache }}/hugo/${{ env.HUGO_VERSION }}-extended/
           fi
         env:
           HUGO_VERSION: ${{ env.HUGO_VERSION }}
 
       - name: Add Hugo to PATH
-        run: echo "${{ runner.tool_cache }}/hugo/${{ env.HUGO_VERSION }}" >> $GITHUB_PATH
-
-      - name: Cache Node.js modules
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.npm
-            node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 'lts/*'  # Use the latest LTS version
-
-      - name: Install Node.js dependencies
-        run: |
-          if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
-            npm ci
-          else
-            npm install
-          fi
+        run: echo "${{ runner.tool_cache }}/hugo/${{ env.HUGO_VERSION }}-extended" >> $GITHUB_PATH
 
       - name: Setup Pages
         id: pages
