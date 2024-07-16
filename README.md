@@ -1,4 +1,5 @@
 [![wakatime](https://wakatime.com/badge/user/358d3109-87a7-4551-8031-898ba083ec52.svg)](https://wakatime.com/@358d3109-87a7-4551-8031-898ba083ec52)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/9209/badge)](https://www.bestpractices.dev/projects/9209)
 
 ---
 I don't check emails frequently, so for personal inquiries, please leave a message in the [GitHub Discussions](https://github.com/cherrycoder9/cherrycoder9/discussions). If you need to have a private conversation, you can leave your email or contact information in the Discussion, or reach out to me on Telegram.
