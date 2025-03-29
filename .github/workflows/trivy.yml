@@ -1,37 +1,65 @@
+# .github/workflows/trivy.yml
+
+# 워크플로우 이름 (GitHub Actions 탭에 표시됨)
 name: trivy
 
+# 워크플로우 실행 조건 (트리거)
 on:
+  # "main" 브랜치에 푸시 시
   push:
-    branches: [ "main" ]
+    branches: ["main"]
+  # "main" 브랜치 대상 풀 리퀘스트 시
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
+  # 주기적 실행 (매주 화요일 11:15 UTC)
   schedule:
-    - cron: '15 11 * * 2'
+    - cron: "15 11 * * 2"
 
+# 워크플로우 실행에 필요한 권한
 permissions:
-  contents: read
-  security-events: write
+  contents: read # 코드 체크아웃을 위한 읽기 권한
+  security-events: write # Code Scanning 결과 업로드를 위한 쓰기 권한
 
+# 실제 작업을 정의하는 부분
 jobs:
+  # 'scan' 작업 정의
   scan:
+    # 작업 이름 (GitHub Actions UI에 표시됨)
     name: Trivy scan
+    # 실행 환경 (최신 우분투)
     runs-on: ubuntu-latest
+    # 작업 내 단계들
     steps:
+      # 1단계: 코드 체크아웃
       - name: Checkout code
+        # actions/checkout 액션 사용 (v4 - 현재 안정 버전)
+        # 저장소 코드를 워크플로우 실행 환경으로 가져옴
         uses: actions/checkout@v4
 
+      # 2단계: Trivy 설정 및 스캔 실행
       - name: Set up Trivy
-        uses: aquasecurity/trivy-action@master
+        # aquasecurity/trivy-action 액션 사용 (v0.21.0 - 현재 안정 버전)
+        # '@master' 대신 특정 버전 태그를 사용해야 워크플로우 안정성이 높아짐
+        # 최신 버전은 https://github.com/aquasecurity/trivy-action/releases 에서 확인 가능
+        uses: aquasecurity/trivy-action@0.21.0
         with:
-          scan-type: 'fs'
-          path: '.'
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-          severity: 'MEDIUM,HIGH,CRITICAL'
+          # 스캔 유형: 'fs' (파일 시스템 스캔 - 코드베이스 자체의 취약점 검사)
+          scan-type: "fs"
+          # 스캔 대상 경로: '.' (현재 디렉토리, 즉 체크아웃된 코드 전체)
+          path: "."
+          # 출력 형식: 'sarif' (정적 분석 결과 교환 표준 형식)
+          format: "sarif"
+          # 결과를 저장할 파일 이름
+          output: "trivy-results.sarif"
+          # 보고할 취약점 심각도 수준: 중간(Medium) 이상만 보고
+          severity: "MEDIUM,HIGH,CRITICAL"
 
+      # 3단계: Trivy 스캔 결과를 GitHub Security 탭에 업로드
       - name: Upload Trivy scan results to GitHub Security tab
+        # github/codeql-action/upload-sarif 액션 사용 (v3 - 최신 안정 버전)
+        # SARIF 파일을 GitHub Security 탭의 Code Scanning 결과로 업로드
+        # permissions에 security-events: write가 있으면 GITHUB_TOKEN은 자동으로 사용됨
         uses: github/codeql-action/upload-sarif@v3
         with:
-          sarif_file: 'trivy-results.sarif'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 업로드할 SARIF 파일 지정
+          sarif_file: "trivy-results.sarif"

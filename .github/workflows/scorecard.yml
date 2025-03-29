@@ -1,41 +1,75 @@
+# .github/workflows/scorecard.yml
+
+# 워크플로우 이름 (GitHub Actions 탭에 표시됨)
 name: Scorecard supply-chain security
 
+# 워크플로우 실행 조건 (트리거)
 on:
+  # 브랜치 보호 규칙 변경 시
   branch_protection_rule:
+  # 주기적 실행 (매주 토요일 05:32 UTC)
   schedule:
-    - cron: '32 5 * * 6'
+    - cron: "32 5 * * 6"
+  # 'main' 브랜치에 푸시 시
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
+# 워크플로우 전체에 적용될 기본 권한 (읽기 전용)
 permissions: read-all
 
+# 실제 작업을 정의하는 부분
 jobs:
+  # 'analysis' 작업 정의
   analysis:
+    # 작업 이름 (GitHub Actions UI에 표시됨)
     name: Scorecard analysis
+    # 실행 환경 (최신 우분투)
     runs-on: ubuntu-latest
+    # 이 작업에 필요한 특정 권한
     permissions:
-      security-events: write
-      id-token: write
+      security-events: write # Code Scanning 결과 업로드 권한
+      id-token: write # OIDC 토큰 요청 권한 (Scorecard 결과 게시용)
 
+    # 작업 내 단계들
     steps:
+      # 1단계: 코드 체크아웃
       - name: "Checkout code"
+        # actions/checkout 액션 사용 (v4 - 현재 안정 버전)
+        # 저장소 코드를 워크플로우 실행 환경으로 가져옴
         uses: actions/checkout@v4
 
+      # 2단계: Scorecard 분석 실행
       - name: "Run analysis"
+        # ossf/scorecard-action 액션 사용 (v2.3.1 - 안정 버전)
+        # OSSF Scorecard 도구를 실행하여 보안 모범 사례 준수 여부 점검
+        # 최신 버전은 https://github.com/ossf/scorecard-action/releases 에서 확인 가능
         uses: ossf/scorecard-action@v2.3.1
         with:
+          # 분석 결과를 저장할 파일 이름
           results_file: results.sarif
+          # 결과 형식은 SARIF (정적 분석 결과 교환 표준)
           results_format: sarif
+          # Scorecard 결과를 GitHub에 게시 (OIDC 인증 필요)
           publish_results: true
 
+      # 3단계: 분석 결과 파일(아티팩트) 업로드
       - name: "Upload artifact"
-        uses: actions/upload-artifact@v3
+        # actions/upload-artifact 액션 사용 (v4 - 최신 안정 버전)
+        # 생성된 SARIF 파일을 아티팩트로 저장하여 나중에 다운로드 가능하게 함
+        uses: actions/upload-artifact@v4
         with:
+          # 아티팩트 이름
           name: SARIF file
+          # 업로드할 파일 경로
           path: results.sarif
+          # 보관 기간 (5일)
           retention-days: 5
 
+      # 4단계: 분석 결과를 GitHub Code Scanning에 업로드
       - name: "Upload to code-scanning"
-        uses: github/codeql-action/upload-sarif@v2
+        # github/codeql-action/upload-sarif 액션 사용 (v3 - 최신 안정 버전)
+        # SARIF 파일을 GitHub Security 탭의 Code Scanning 결과로 업로드
+        uses: github/codeql-action/upload-sarif@v3
         with:
+          # 업로드할 SARIF 파일 지정
           sarif_file: results.sarif
