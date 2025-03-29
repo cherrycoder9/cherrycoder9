@@ -1,5 +1,5 @@
 {
-  "name": "ssg-astro",
+  "name": "cherrycoder9",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,6 +10,5 @@
   },
   "dependencies": {
     "astro": "^5.5.5"
-  },
-  "packageManager": "pnpm@10.7.0"
+  }
 }
