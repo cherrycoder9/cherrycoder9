@@ -14,7 +14,7 @@ on:
 # GITHUB_TOKEN에 GitHub Pages 배포에 필요한 권한을 설정합니다.
 permissions:
   contents: read # 저장소 콘텐츠를 읽을 수 있는 권한입니다.
-  pages: write    # GitHub Pages에 배포할 수 있는 권한입니다.
+  pages: write # GitHub Pages에 배포할 수 있는 권한입니다.
   id-token: write # OpenID Connect ID 토큰을 쓸 수 있는 권한으로, 배포 액션에 필요합니다.
 
 # 동시 배포를 제어합니다. 한 번에 하나의 배포만 실행되도록 하고,
@@ -138,4 +138,3 @@ jobs:
         id: deployment
         # 'build' 작업에서 업로드한 아티팩트를 가져와 GitHub Pages에 배포합니다.
         uses: actions/deploy-pages@v4
-        
