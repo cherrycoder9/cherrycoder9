@@ -59,7 +59,7 @@ jobs:
           elif [ -f "package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
-            echo "runner=npx" >> $GITHUB_OUTPUT # npx를 사용하여 로컬 패키지 실행
+            echo "runner=npx" >> $GITHUB_OUTPUT
             echo "lockfile=package-lock.json" >> $GITHUB_OUTPUT
             exit 0
           else
