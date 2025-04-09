@@ -1,5 +1,39 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "compilerOptions": {
+    "baseUrl": "src",
+    // "paths": {
+    //   "@lib/*": [
+    //     "lib/*"
+    //   ],
+    //   "@types/*": [
+    //     "../types/*"
+    //   ]
+    // },
+    // "typeRoots": [
+    //   "./types",
+    //   "./node_modules/@types"
+    // ],
+    "target": "ES2022",
+    "module": "NodeNext",
+    "outDir": "./docs/js", // JS 결과물 저장 위치
+    "rootDir": "./src/ts", // TS 소스 위치
+    "moduleResolution": "nodenext",
+    "esModuleInterop": false, // CommonJS 사용안함
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowJs": false, // TS만
+    "sourceMap": false,
+    "verbatimModuleSyntax": true // 타입전용, 런타임 import 구분해 사용
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.mts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "docs"
+  ]
 }

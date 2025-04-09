@@ -1,14 +1,15 @@
 {
   "name": "cherrycoder9",
   "type": "module",
-  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "build": "bun tsc",
+    "preview": "bunx serve docs"
   },
-  "dependencies": {
-    "astro": "^5.5.5"
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://cherrycoder9.github.io/cherrycoder9/sitemap.xml
