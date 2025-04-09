@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://cherrycoder9.github.io/cherrycoder9/sitemap.xml
+Sitemap: https://cherrycoder9.github.io/sitemap.xml
