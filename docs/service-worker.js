@@ -1,6 +1,6 @@
 // docs/service-worker.js
 
-const CACHE_NAME = "cherrycoder-cache-v3"; // 새버전 배포시 변경
+const CACHE_NAME = "cherrycoder-cache-v4"; // 새버전 배포시 변경
 const FILES_TO_CACHE = [
   "/",
   "/index.html",
