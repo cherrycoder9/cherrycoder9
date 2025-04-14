@@ -1,7 +1,7 @@
 // src/ts/load-social-links.mts
 
 // 소셜 링크 HTML 조각 파일 경로
-const socialLinksFilePath: string = './_includes/social-links.html';
+const socialLinksFilePath: string = '/docs/_includes/social-links.html';
 // 소셜 링크를 삽입할 대상 요소의 ID
 const placeholderId: string = 'social-links-placeholder';
 
