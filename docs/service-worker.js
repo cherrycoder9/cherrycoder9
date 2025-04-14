@@ -1,12 +1,25 @@
 // docs/service-worker.js
 
 // 캐시 이름 (버전 업데이트 시 변경 필요)
-const CACHE_NAME = "cherrycoder-cache-v5";
+const CACHE_NAME = "cherrycoder-cache-v6";
 // 캐싱할 정적 파일 목록
 const FILES_TO_CACHE = [
   "/", // 루트 경로 (보통 index.html과 동일)
   "/index.html", // 메인 HTML 파일
+  "/posts.html",
+  "/works.html",
+  "/contact.html",
+  "/_includes/nav.html",
+  "/_includes/social-links.html",
+  "/assets/sns-image/bluesky.svg",
+  "/assets/sns-image/github.svg",
+  "/assets/sns-image/linkedin.svg",
+  "/assets/sns-image/stack-overflow.svg",
+  "/assets/sns-image/x-twitter.svg",
+  "/assets/sns-image/youtube.svg",
   "/js/index.mjs", // 메인 JavaScript 모듈
+  "/js/load-nav.mjs",
+  "/js/load-social-links.mjs",
   "/css/reset.css", // CSS 리셋 파일
   "/site.webmanifest", // 웹 앱 매니페스트
   "/favicon.ico", // 파비콘
