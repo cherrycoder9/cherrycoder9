@@ -1,67 +1,118 @@
 // docs/service-worker.js
 
-const CACHE_NAME = "cherrycoder-cache-v4"; // 새버전 배포시 변경
+// 캐시 이름 (버전 업데이트 시 변경 필요)
+const CACHE_NAME = "cherrycoder-cache-v5";
+// 캐싱할 정적 파일 목록
 const FILES_TO_CACHE = [
-  "/",
-  "/index.html",
-  "/js/index.mjs",
-  "/css/reset.css",
-  "/site.webmanifest",
-  "/favicon.ico",
-  "/android-chrome-192x192.png",
-  "/android-chrome-512x512.png"
+  "/", // 루트 경로 (보통 index.html과 동일)
+  "/index.html", // 메인 HTML 파일
+  "/js/index.mjs", // 메인 JavaScript 모듈
+  "/css/reset.css", // CSS 리셋 파일
+  "/site.webmanifest", // 웹 앱 매니페스트
+  "/favicon.ico", // 파비콘
+  "/android-chrome-192x192.png", // 안드로이드 홈 화면 아이콘 (192x192)
+  "/android-chrome-512x512.png", // 안드로이드 홈 화면 아이콘 (512x512)
 ];
 
-// install 이벤트 – 캐시 저장
-// Service Worker가 최초 등록되거나, 변경사항이 있어 새로 설치될 때 실행
+/**
+ * 서비스 워커 설치 이벤트 핸들러
+ * - 지정된 파일들을 캐시에 저장
+ * ! self 키워드는 서비스 워커나 웹 워커 환경에서 
+ * ! 전역 스코프(global scope), 즉 워커 자체를 가리키는 특별한 키워드
+ * 서비스 워커는 웹 페이지와 분리된 별도의 스레드에서 실행되고, 
+ * DOM(Document Object Model)에 직접 접근할 수 없음
+ * 그래서 window 객체가 존재하지 않는 대신 워커 환경에서는 self가 그 역할을 함.
+ * install, 웹사이트에 서비스 워커가 처음으로 등록될 때 발생
+ * 브라우저가 해당 사이트의 서비스 워커 코드를 처음 발견하고 설치를 시작
+ */
 self.addEventListener("install", (event) => {
-  console.log("[ServiceWorker] Install");
+  console.log("[ServiceWorker] 설치 중...");
+  // waitUntil: 이 작업이 끝날 때까지 설치 단계를 완료하지 않음
   event.waitUntil(
-    // CACHE_NAME으로 캐시를 열고, 지정된 파일들을 전부 저장
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log("[ServiceWorker] Caching app shell");
-        // addAll()은 한 번에 여러 파일을 캐싱함. 하나라도 실패하면 전체가 실패
-        return cache.addAll(FILES_TO_CACHE);
-      })
-      .catch((error) => {
-        console.error("[ServiceWorker] Failed to cache:", error);
-      })
+    // async 함수를 사용하여 비동기 작업을 처리
+    (async () => {
+      try {
+        // 지정된 이름으로 캐시 저장소를 엽니다.
+        const cache = await caches.open(CACHE_NAME);
+        console.log("[ServiceWorker] 앱 셸 캐싱 중...");
+        // 필수 파일들을 캐시에 추가합니다. 하나라도 실패하면 전체 실패.
+        await cache.addAll(FILES_TO_CACHE);
+        console.log("[ServiceWorker] 앱 셸 캐싱 완료.");
+      } catch (error) {
+        console.error("[ServiceWorker] 캐싱 실패:", error);
+      }
+    })()
   );
-  // 기본적으로 설치 후 대기 상태(waiting)에 머무르는데, 이걸 생략하고 바로 활성 상태로 전환
+  // 새 서비스 워커가 설치되면 즉시 활성화되도록 강제합니다. (대기 상태 건너뛰기)
   self.skipWaiting();
 });
 
-// activate 이벤트 – 이전 캐시 정리
-// 기존에 등록돼 있던 오래된 캐시를 전부 정리하고, 새 캐시만 유지
+/**
+ * 서비스 워커 활성화 이벤트 핸들러
+ * - 이전 버전의 캐시를 정리
+ */
 self.addEventListener("activate", (event) => {
-  console.log("[ServiceWorker] Activate");
+  console.log("[ServiceWorker] 활성화 중...");
+  // waitUntil: 이 작업이 끝날 때까지 활성화 단계를 완료하지 않음
   event.waitUntil(
-    // caches.keys()로 등록된 모든 캐시 이름을 가져와서, 현재 캐시와 이름이 다르면 삭제
-    caches.keys().then((cacheNames) =>
-      Promise.all(
-        cacheNames.map((cache) => {
-          if (cache !== CACHE_NAME) {
-            console.log("[ServiceWorker] Deleting old cache:", cache);
-            return caches.delete(cache);
+    (async () => {
+      // 현재 캐시 저장소의 모든 키(이름)를 가져옵니다.
+      const cacheNames = await caches.keys();
+      // 모든 캐시 삭제 작업을 병렬로 처리합니다.
+      await Promise.all(
+        // 각 캐시 이름에 대해 반복
+        cacheNames.map(async (cacheName) => {
+          // 현재 사용 중인 캐시가 아니면 삭제합니다.
+          if (cacheName !== CACHE_NAME) {
+            console.log(`[ServiceWorker] 오래된 캐시 삭제: ${cacheName}`);
+            await caches.delete(cacheName);
           }
         })
-      )
-    )
+      );
+      console.log("[ServiceWorker] 오래된 캐시 정리 완료.");
+    })()
   );
-  // 새 Service Worker가 바로 기존 클라이언트 탭들에 적용되도록 함
+  // 서비스 워커가 활성화되면 즉시 클라이언트(열린 탭 등)를 제어하도록 합니다.
   self.clients.claim();
 });
 
-// 캐시된 파일 먼저, 없으면 네트워크
-// 사용자가 페이지에서 네트워크 요청을 할 때마다 Service Worker가 그걸 가로챔
+/**
+ * 네트워크 요청 가로채기(fetch) 이벤트 핸들러
+ * - 캐시 우선 전략(Cache First)을 사용
+ */
 self.addEventListener("fetch", (event) => {
+  // respondWith: 브라우저의 기본 fetch 핸들링을 막고, 직접 응답을 제공
   event.respondWith(
-    // 캐시 우선 전략(Cache First)
-    // 먼저 캐시에 해당 리소스가 있으면 그걸 반환
-    // 없으면 네트워크로부터 받아옴
-    caches.match(event.request).then((cached) => {
-      return cached || fetch(event.request);
-    })
+    (async () => {
+      try {
+        // 요청에 해당하는 캐시된 응답을 찾습니다.
+        const cachedResponse = await caches.match(event.request);
+        // 캐시된 응답이 있으면 그것을 반환합니다.
+        if (cachedResponse) {
+          // console.log("[ServiceWorker] 캐시에서 응답 제공:", event.request.url);
+          return cachedResponse;
+        }
+
+        // 캐시에 없으면 네트워크로 요청을 보냅니다.
+        // console.log("[ServiceWorker] 네트워크에서 응답 가져옴:", event.request.url);
+        const networkResponse = await fetch(event.request);
+
+        // 참고: 네트워크 응답을 캐시에 저장하는 로직 추가 가능
+        // Cache First 전략에서는 필수는 아니지만, 필요시 아래 주석 해제 및 수정
+        /*
+        if (networkResponse && networkResponse.status === 200 && event.request.method === 'GET') {
+          const cache = await caches.open(CACHE_NAME);
+          // 응답을 복제하여 캐시에 저장 (응답 스트림은 한 번만 사용 가능)
+          await cache.put(event.request, networkResponse.clone());
+        }
+        */
+
+        return networkResponse;
+      } catch (error) {
+        console.error("[ServiceWorker] Fetch 에러:", error);
+        // 오프라인 상태 등 네트워크 오류 시 대체 응답 제공 가능
+        // return new Response("오프라인 상태입니다.", { status: 503, statusText: "Service Unavailable" });
+      }
+    })()
   );
 });
