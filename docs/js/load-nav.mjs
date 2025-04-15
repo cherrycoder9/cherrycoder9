@@ -1,6 +1,6 @@
 // src/ts/load-nav.mts
 // 공통 네비게이션 메뉴 HTML 파일 경로
-const navFilePath = '/_includes/nav.html';
+const navFilePath = '/includes/nav.html';
 /**
  * 네비게이션 메뉴를 비동기적으로 로드하고 페이지에 삽입하는 함수
  * @returns {Promise<void>}
@@ -45,7 +45,7 @@ async function loadNavigation() {
 // DOM 콘텐츠가 완전히 로드되고 파싱된 후 loadNavigation 함수 실행
 // 'DOMContentLoaded' 이벤트 리스너의 콜백은 Event 타입을 받지만, 여기서는 사용하지 않음
 document.addEventListener('DOMContentLoaded', loadNavigation);
-export { };
+export {};
 // 또는 더 명시적으로:
 // document.addEventListener('DOMContentLoaded', () => {
 //   loadNavigation().catch(err => console.error("loadNavigation 실행 중 에러:", err));
