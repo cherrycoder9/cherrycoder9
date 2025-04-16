@@ -8,9 +8,11 @@ const FILES_TO_CACHE = [
   "/index.html", // 메인 HTML 파일
   "/posts.html",
   "/works.html",
+  "/donate.html",
   "/contact.html",
   "/_includes/nav.html",
   "/_includes/social-links.html",
+  "/_includes/controls.html",
   "/assets/sns-image/bluesky.svg",
   "/assets/sns-image/github.svg",
   "/assets/sns-image/linkedin.svg",
@@ -20,6 +22,7 @@ const FILES_TO_CACHE = [
   "/js/index.mjs", // 메인 JavaScript 모듈
   "/js/load-nav.mjs",
   "/js/load-social-links.mjs",
+  "/js/load-controls.mjs",
   "/css/reset.css", // CSS 리셋 파일
   "/site.webmanifest", // 웹 앱 매니페스트
   "/favicon.ico", // 파비콘

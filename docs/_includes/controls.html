@@ -1,0 +1,24 @@
+<!-- src/_includes/controls.html -->
+<!-- CSS 스타일은 별도 파일에서 클래스 기반으로 적용해야 함 -->
+<!-- 각 버튼의 실제 기능(클릭 시 동작)은 별도의 JavaScript 코드로 구현해야 함 -->
+
+<!-- 맨 위로 가기 버튼 -->
+<button id="scroll-top-btn" type="button" title="Scroll to top (Shift + ↑)" class="control-button scroll-top">
+  <!-- 아이콘/텍스트는 여기에 -->
+  <span>▲ <kbd>Shift</kbd> + <kbd>↑</kbd></span>
+</button>
+
+<button id="theme-toggle-btn" type="button" title="Toggle theme (Shift + T)" class="control-button theme-toggle">
+  <!-- 초기 아이콘(☀️/🌙)은 JS로 설정하고, 단축키 정보 표시 -->
+  <span class="theme-icon"></span> <kbd>Shift</kbd> + <kbd>T</kbd>
+</button>
+
+<!-- 설정 버튼 (클릭 시 설정 패널/모달 표시) -->
+<button id="settings-btn" type="button" title="Open settings (Shift + S)" class="control-button settings-open">
+  <span>⚙️ <kbd>Shift</kbd> + <kbd>S</kbd></span>
+</button>
+
+<!-- 맨 아래로 가기 버튼 -->
+<button id="scroll-bottom-btn" type="button" title="Scroll to bottom (Shift + ↓)" class="control-button scroll-bottom">
+  <span>▼ <kbd>Shift</kbd> + <kbd>↓</kbd></span>
+</button>

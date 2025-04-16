@@ -1,5 +1,6 @@
 // src/ts/load-nav.mts
 // 공통 네비게이션 메뉴 HTML 파일 경로
+console.log('load-nav.mts');
 const navFilePath = '/_includes/nav.html';
 /**
  * 네비게이션 메뉴를 비동기적으로 로드하고 페이지에 삽입하는 함수
