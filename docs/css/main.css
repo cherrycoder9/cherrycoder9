@@ -1,11 +1,5 @@
-body {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 60px;
-}
-
 main {
   width: 50vw;
+  margin: 50px;
+  padding-left: 30px;
 }
