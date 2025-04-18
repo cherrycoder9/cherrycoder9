@@ -10,15 +10,24 @@ aside {
 }
 
 .sns-icon {
-  width: 32;
-  height: 32px;
+  width: 24;
+  height: 24px;
 }
-
-
 
 #social-links-placeholder>ul {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   gap: 4px;
+}
+
+#page-controls-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.controls-icon {
+  width: 28;
+  height: 28px;
 }

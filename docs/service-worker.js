@@ -1,7 +1,7 @@
 // docs/service-worker.js
 
 // 캐시 이름 (버전 업데이트 시 변경 필요)
-const CACHE_NAME = "cherrycoder-cache-v9";
+const CACHE_NAME = "cherrycoder-cache-v10";
 // 캐싱할 정적 파일 목록
 const FILES_TO_CACHE = [
   "/", // 루트 경로 (보통 index.html과 동일)
@@ -10,34 +10,47 @@ const FILES_TO_CACHE = [
   "/works.html",
   "/donate.html",
   "/contact.html",
+
   // 태그 조각
   "/_includes/nav.html",
   "/_includes/social-links.html",
   "/_includes/controls.html",
+
   // nav-img
-  "/assets/nav-image/contact.svg",
-  "/assets/nav-image/donate.svg",
-  "/assets/nav-image/home.svg",
-  "/assets/nav-image/posts.svg",
-  "/assets/nav-image/works.svg",
+  "/assets/nav-img/contact.svg",
+  "/assets/nav-img/donate.svg",
+  "/assets/nav-img/home.svg",
+  "/assets/nav-img/posts.svg",
+  "/assets/nav-img/works.svg",
+
   // sns-img
-  "/assets/sns-image/bluesky.svg",
-  "/assets/sns-image/github.svg",
-  "/assets/sns-image/linkedin.svg",
-  "/assets/sns-image/stack-overflow.svg",
-  "/assets/sns-image/x-twitter.svg",
-  "/assets/sns-image/youtube.svg",
+  "/assets/sns-img/bluesky.svg",
+  "/assets/sns-img/github.svg",
+  "/assets/sns-img/linkedin.svg",
+  "/assets/sns-img/stack-overflow.svg",
+  "/assets/sns-img/x-twitter.svg",
+  "/assets/sns-img/youtube.svg",
+
+  // controls-img
+  "/assets/controls-img/arrow-up.svg",
+  "/assets/controls-img/arrow-down.svg",
+  "/assets/controls-img/settings.svg",
+
   // JS 코드 
   "/js/index.mjs",
   "/js/load-nav.mjs",
   "/js/load-social-links.mjs",
   "/js/load-controls.mjs",
+
   // CSS 파일 
   "/css/reset.css",
+  "/css/fonts.css",
   "/css/index.css",
   "/css/main.css",
   "/css/nav.css",
   "/css/aside.css",
+
+  // etc.
   "/site.webmanifest", // 웹 앱 매니페스트
   "/favicon.ico", // 파비콘
   "/android-chrome-192x192.png", // 안드로이드 홈 화면 아이콘 (192x192)

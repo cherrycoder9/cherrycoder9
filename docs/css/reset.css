@@ -61,3 +61,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+kbd {
+  font-family: monospace;
+  padding: 0.1em 0.4em;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 0.7em;
+  color: #333;
+}
