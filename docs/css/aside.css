@@ -1,0 +1,24 @@
+aside {
+  height: 90vh;
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sns-icon {
+  width: 32;
+  height: 32px;
+}
+
+
+
+#social-links-placeholder>ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 4px;
+}

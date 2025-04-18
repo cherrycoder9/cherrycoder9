@@ -27,13 +27,16 @@ const FILES_TO_CACHE = [
   "/assets/sns-image/stack-overflow.svg",
   "/assets/sns-image/x-twitter.svg",
   "/assets/sns-image/youtube.svg",
-  "/js/index.mjs", // 메인 JavaScript 모듈
+  // JS 코드 
+  "/js/index.mjs",
   "/js/load-nav.mjs",
   "/js/load-social-links.mjs",
   "/js/load-controls.mjs",
-  "/css/reset.css", // CSS 리셋 파일
+  // CSS 파일 
+  "/css/reset.css",
   "/css/main.css",
   "/css/nav.css",
+  "/css/aside.css",
   "/site.webmanifest", // 웹 앱 매니페스트
   "/favicon.ico", // 파비콘
   "/android-chrome-192x192.png", // 안드로이드 홈 화면 아이콘 (192x192)
