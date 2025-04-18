@@ -4,19 +4,19 @@
 
 <!-- 맨 위로 가기 버튼 -->
 <button id="scroll-top-btn" type="button" title="Scroll to top (Shift + ↑)" class="control-button scroll-top">
-  <!-- 아이콘/텍스트는 여기에 -->
   <span>▲ <kbd>Shift</kbd> + <kbd>↑</kbd></span>
 </button>
 
-<button id="theme-toggle-btn" type="button" title="Toggle theme (Shift + T)" class="control-button theme-toggle">
-  <!-- 초기 아이콘(☀️/🌙)은 JS로 설정하고, 단축키 정보 표시 -->
-  <span class="theme-icon"></span> <kbd>Shift</kbd> + <kbd>T</kbd>
-</button>
+<!-- 테마 & 설정 버튼 그룹 -->
+<div class="control-group theme-settings-group">
+  <button id="theme-toggle-btn" type="button" title="Toggle theme (Shift + T)" class="control-button theme-toggle">
+    <span class="theme-icon"></span> <kbd>Shift</kbd> + <kbd>T</kbd>
+  </button>
 
-<!-- 설정 버튼 (클릭 시 설정 패널/모달 표시) -->
-<button id="settings-btn" type="button" title="Open settings (Shift + S)" class="control-button settings-open">
-  <span>⚙️ <kbd>Shift</kbd> + <kbd>S</kbd></span>
-</button>
+  <button id="settings-btn" type="button" title="Open settings (Shift + S)" class="control-button settings-open">
+    <span>⚙️ <kbd>Shift</kbd> + <kbd>S</kbd></span>
+  </button>
+</div> <!-- /control-group -->
 
 <!-- 맨 아래로 가기 버튼 -->
 <button id="scroll-bottom-btn" type="button" title="Scroll to bottom (Shift + ↓)" class="control-button scroll-bottom">
