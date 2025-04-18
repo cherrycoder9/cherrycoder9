@@ -1,7 +1,7 @@
 // docs/service-worker.js
 
 // 캐시 이름 (버전 업데이트 시 변경 필요)
-const CACHE_NAME = "cherrycoder-cache-v6";
+const CACHE_NAME = "cherrycoder-cache-v7";
 // 캐싱할 정적 파일 목록
 const FILES_TO_CACHE = [
   "/", // 루트 경로 (보통 index.html과 동일)
@@ -10,9 +10,17 @@ const FILES_TO_CACHE = [
   "/works.html",
   "/donate.html",
   "/contact.html",
+  // 태그 조각
   "/_includes/nav.html",
   "/_includes/social-links.html",
   "/_includes/controls.html",
+  // nav-img
+  "/assets/nav-image/contact.svg",
+  "/assets/nav-image/donate.svg",
+  "/assets/nav-image/home.svg",
+  "/assets/nav-image/posts.svg",
+  "/assets/nav-image/works.svg",
+  // sns-img
   "/assets/sns-image/bluesky.svg",
   "/assets/sns-image/github.svg",
   "/assets/sns-image/linkedin.svg",
@@ -24,6 +32,8 @@ const FILES_TO_CACHE = [
   "/js/load-social-links.mjs",
   "/js/load-controls.mjs",
   "/css/reset.css", // CSS 리셋 파일
+  "/css/main.css",
+  "/css/nav.css",
   "/site.webmanifest", // 웹 앱 매니페스트
   "/favicon.ico", // 파비콘
   "/android-chrome-192x192.png", // 안드로이드 홈 화면 아이콘 (192x192)
