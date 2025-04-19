@@ -2,7 +2,7 @@ aside {
   height: 90vh;
   position: fixed;
   top: 50%;
-  right: 70px;
+  right: 3vw;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
