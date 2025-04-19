@@ -27,6 +27,12 @@ aside {
   gap: 12px;
 }
 
+#page-controls-container>button {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
 .controls-icon {
   width: 28;
   height: 28px;
