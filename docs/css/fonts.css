@@ -1,3 +1,30 @@
+/* sanchez-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Sanchez';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/sanchez-v15-latin-regular.woff2') format('woff2');
+}
+
+/* rubik-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/rubik-v28-latin-regular.woff2') format('woff2');
+}
+
+/* solway-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Solway';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/fonts/solway-v18-latin-500.woff2') format('woff2');
+}
+
 .nav-label {
   font-family: "Sanchez", serif;
   font-weight: 400;
@@ -7,7 +34,7 @@
 
 h1 {
   font-family: "Solway", serif;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-size: 32px;
 }
@@ -24,7 +51,7 @@ h1::after {
 
 h2 {
   font-family: "Solway", serif;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-size: 28px;
   margin-top: 20px;
@@ -32,7 +59,7 @@ h2 {
 
 h3 {
   font-family: "Solway", serif;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-size: 24px;
   margin-top: 20px;
@@ -40,9 +67,9 @@ h3 {
 
 h4 {
   font-family: "Solway", serif;
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 20px;
 }
 
@@ -51,7 +78,7 @@ p {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
+  font-size: 19px;
   margin-bottom: 12px;
   hyphens: auto;
   text-align: justify;

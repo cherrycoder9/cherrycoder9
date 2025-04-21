@@ -21,30 +21,10 @@
   <!-- Android, PWA용 -->
   <link rel="manifest" href="./site.webmanifest" />
 
-  <!-- 폰트 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Sanchez 폰트 (이미 수정한 것) -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap">
-  </noscript>
-
-  <!-- Solway 폰트 (수정) -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap">
-  </noscript>
-
-  <!-- Rubik 폰트 (수정) -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap">
-  </noscript>
+  <!-- 폰트 preload -->
+  <link rel="preload" href="/assets/fonts/sanchez-v15-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/rubik-v28-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/solway-v18-latin-500.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css">

@@ -1,7 +1,7 @@
 // docs/service-worker.js
 
 // 캐시 이름 (버전 업데이트 시 변경 필요)
-const CACHE_NAME = "cherrycoder-cache-v11";
+const CACHE_NAME = "cherrycoder-cache-v14";
 // 캐싱할 정적 파일 목록
 const FILES_TO_CACHE = [
   "/", // 루트 경로 (보통 index.html과 동일)
@@ -10,6 +10,11 @@ const FILES_TO_CACHE = [
   "/works.html",
   "/donate.html",
   "/contact.html",
+
+  // 폰트
+  "/assets/fonts/rubik-v28-latin-regular.woff2",
+  "/assets/fonts/sanchez-v15-latin-regular.woff2",
+  "/assets/fonts/solway-v18-latin-500.woff2",
 
   // 태그 조각
   "/_includes/nav.html",
