@@ -15,9 +15,15 @@ nav {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin: 8px;
 }
 
 .nav-icon {
   width: 28px;
   height: 28px;
+}
+
+#main-nav>ul>li.active {
+  border: 2px solid black;
+  border-radius: 10px;
 }

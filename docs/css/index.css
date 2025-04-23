@@ -4,3 +4,13 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+ul>li:hover {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
+
+ul>li:hover>a>img {
+  filter: invert(1);
+}

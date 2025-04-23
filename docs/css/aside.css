@@ -10,8 +10,9 @@ aside {
 }
 
 .sns-icon {
-  width: 24;
-  height: 24px;
+  width: 20;
+  height: 20px;
+  margin: 4px;
 }
 
 #social-links-placeholder>ul {
@@ -34,6 +35,6 @@ aside {
 }
 
 .controls-icon {
-  width: 28;
+  width: 28px;
   height: 28px;
 }
