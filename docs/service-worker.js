@@ -8,7 +8,7 @@ const FILES_TO_CACHE = [
   "/index.html", // 메인 HTML 파일
   "/posts.html",
   "/works.html",
-  "/donate.html",
+  // "/donate.html",
   "/contact.html",
 
   // 폰트
@@ -19,7 +19,7 @@ const FILES_TO_CACHE = [
   // 태그 조각
   "/_includes/nav.html",
   "/_includes/social-links.html",
-  "/_includes/controls.html",
+  // "/_includes/controls.html",
 
   // nav-img
   "/assets/nav-img/contact.svg",
@@ -45,7 +45,7 @@ const FILES_TO_CACHE = [
   "/js/index.mjs",
   "/js/load-nav.mjs",
   "/js/load-social-links.mjs",
-  "/js/load-controls.mjs",
+  // "/js/load-controls.mjs",
   "/js/nav/activate-nav.mjs",
 
   // CSS 파일 
