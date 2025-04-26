@@ -36,6 +36,12 @@ img {
   display: block;
 }
 
+img,
+picture,
+video {
+  max-width: 100%;
+}
+
 ul,
 ol {
   list-style: none;
