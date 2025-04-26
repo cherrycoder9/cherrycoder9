@@ -22,6 +22,16 @@ aside {
   gap: 4px;
 }
 
+#social-links-placeholder>ul>li:hover {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
+
+#social-links-placeholder>ul>li:hover>a>img {
+  filter: invert(1);
+}
+
 /* #page-controls-container {
   display: flex;
   flex-direction: column;

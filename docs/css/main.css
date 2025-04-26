@@ -55,3 +55,15 @@ p {
   hyphens: auto;
   text-align: justify;
 }
+
+main>ul>li {
+  list-style-type: disc;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
+  hyphens: auto;
+  text-align: justify;
+  margin-left: 20px;
+}

@@ -18,6 +18,16 @@ nav {
   padding: 8px;
 }
 
+#main-nav>ul>li:hover {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+}
+
+#main-nav>ul>li:hover>a>img {
+  filter: invert(1);
+}
+
 .nav-icon {
   width: 28px;
   height: 28px;
