@@ -1,3 +1,3 @@
 // src/ts/index.mts
-console.log('index.mts');
 export {};
+// console.log('index.mts');

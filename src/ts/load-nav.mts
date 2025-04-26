@@ -1,7 +1,7 @@
 // src/ts/load-nav.mts
 
 // 공통 네비게이션 메뉴 HTML 파일 경로
-console.log('load-nav.mts');
+// console.log('load-nav.mts');
 const navFilePath: string = '/_includes/nav.html';
 
 /**
@@ -35,7 +35,7 @@ async function loadNavigation(): Promise<void> {
     // 성공적으로 가져온 HTML 내용을 대상 요소의 내부 HTML로 설정
     // navContainer는 null이 아님이 위에서 확인되었으므로 안전하게 접근 가능
     navContainer.innerHTML = htmlContent;
-    console.log('네비게이션 로드 및 삽입 성공.');
+    // console.log('네비게이션 로드 및 삽입 성공.');
 
   } catch (error: unknown) { // catch 절의 에러 타입은 기본적으로 unknown
     // fetch 작업 중 또는 응답 처리 중 에러 발생 시 실행됨

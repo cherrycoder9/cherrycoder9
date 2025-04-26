@@ -1,6 +1,6 @@
 // src/ts/load-social-links.mts
 
-console.log('load-social-links.mts');
+// console.log('load-social-links.mts');
 
 // 소셜 링크 HTML 조각 파일 경로
 const socialLinksFilePath: string = '/_includes/social-links.html';
@@ -35,10 +35,9 @@ async function loadSocialLinks(): Promise<void> {
 
     // 대상 요소에 HTML 삽입
     placeholderElement.innerHTML = htmlContent;
-    console.log('소셜 링크 로드 및 삽입 성공.');
+    // console.log('소셜 링크 로드 및 삽입 성공.');
 
   } catch (error: unknown) {
-    // 개발자를 위한 상세 에러 로그
     console.error('소셜 링크 로딩 실패:', error);
 
     // 사용자에게는 실패 사실을 알리지 않거나, 최소한으로 표시

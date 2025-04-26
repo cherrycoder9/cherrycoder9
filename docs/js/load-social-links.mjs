@@ -1,5 +1,5 @@
 // src/ts/load-social-links.mts
-console.log('load-social-links.mts');
+// console.log('load-social-links.mts');
 // 소셜 링크 HTML 조각 파일 경로
 const socialLinksFilePath = '/_includes/social-links.html';
 // 소셜 링크를 삽입할 대상 요소의 ID
@@ -27,10 +27,9 @@ async function loadSocialLinks() {
         const htmlContent = await response.text();
         // 대상 요소에 HTML 삽입
         placeholderElement.innerHTML = htmlContent;
-        console.log('소셜 링크 로드 및 삽입 성공.');
+        // console.log('소셜 링크 로드 및 삽입 성공.');
     }
     catch (error) {
-        // 개발자를 위한 상세 에러 로그
         console.error('소셜 링크 로딩 실패:', error);
         // 사용자에게는 실패 사실을 알리지 않거나, 최소한으로 표시
         // 예: placeholder를 그냥 비워둠 (메뉴 로딩 실패와 달리, 소셜 링크는 없어도 치명적이지 않음)

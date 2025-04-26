@@ -82,13 +82,13 @@ function activateCurrentNav() {
 
     if (listItem) {
       listItem.classList.add('active');
-      console.log(`Active class added to: ${finalMatch.link.getAttribute('href')}`);
+      // console.log(`Active class added to: ${finalMatch.link.getAttribute('href')}`);
     } else {
       console.warn('Could not find parent <li> for the active link:', finalMatch.link);
     }
   } else {
     // 매칭되는 링크가 없을때 (루트 경로 '/' 처리)
-    console.log('No specific navigation linnk matched. Checking for root path...');
+    // console.log('No specific navigation linnk matched. Checking for root path...');
     // 현재 경로가 정확히 루트일 경우 홈 링크 활성화 
     if (currentPathname === '/') {
       const homeLink = navContainer.querySelector<HTMLAnchorElement>('ul>li>a[href="/"]');
@@ -96,14 +96,14 @@ function activateCurrentNav() {
         const homeLi = homeLink.closest('li');
         if (homeLi) {
           homeLi.classList.add('active');
-          console.log('Active class added to: / (Home)');
+          // console.log('Active class added to: / (Home)');
         }
       }
     } else {
-      console.log('No matching navigation link found for the current path:', currentPathname);
+      // console.log('No matching navigation link found for the current path:', currentPathname);
     }
   }
 }
 
 // DOM이 로드된 후 네비게이션 활성화 함수 실행
-document.addEventListener('DOMContentLoaded', activateCurrentNav);
+document.addEventListener('nav-loaded', activateCurrentNav);

@@ -4,3 +4,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+html,
+body {
+  overflow: auto;
+  scrollbar-width: none;
+}

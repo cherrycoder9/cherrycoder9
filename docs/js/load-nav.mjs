@@ -1,6 +1,6 @@
 // src/ts/load-nav.mts
 // 공통 네비게이션 메뉴 HTML 파일 경로
-console.log('load-nav.mts');
+// console.log('load-nav.mts');
 const navFilePath = '/_includes/nav.html';
 /**
  * 네비게이션 메뉴를 비동기적으로 로드하고 페이지에 삽입하는 함수
@@ -28,9 +28,7 @@ async function loadNavigation() {
         // 성공적으로 가져온 HTML 내용을 대상 요소의 내부 HTML로 설정
         // navContainer는 null이 아님이 위에서 확인되었으므로 안전하게 접근 가능
         navContainer.innerHTML = htmlContent;
-        console.log('네비게이션 로드 및 삽입 성공.');
-        const navLoadedEvent = new CustomEvent('nav-loaded');
-        document.dispatchEvent(navLoadedEvent); // 문서 전체에 'nav-loaded' 이벤트 발생!
+        // console.log('네비게이션 로드 및 삽입 성공.');
     }
     catch (error) { // catch 절의 에러 타입은 기본적으로 unknown
         // fetch 작업 중 또는 응답 처리 중 에러 발생 시 실행됨
@@ -48,7 +46,7 @@ async function loadNavigation() {
 // DOM 콘텐츠가 완전히 로드되고 파싱된 후 loadNavigation 함수 실행
 // 'DOMContentLoaded' 이벤트 리스너의 콜백은 Event 타입을 받지만, 여기서는 사용하지 않음
 document.addEventListener('DOMContentLoaded', loadNavigation);
-export { };
+export {};
 // 또는 더 명시적으로:
 // document.addEventListener('DOMContentLoaded', () => {
 //   loadNavigation().catch(err => console.error("loadNavigation 실행 중 에러:", err));
