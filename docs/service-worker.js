@@ -1,7 +1,7 @@
 // docs/service-worker.js
 
 // 캐시 이름 (버전 업데이트 시 변경 필요)
-const CACHE_NAME = "cherrycoder-cache-v19";
+const CACHE_NAME = "cherrycoder-cache-v21";
 // 캐싱할 정적 파일 목록
 const FILES_TO_CACHE = [
   "/", // 루트 경로 (보통 index.html과 동일)

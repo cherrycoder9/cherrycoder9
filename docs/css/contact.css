@@ -1,0 +1,80 @@
+/* docs/css/contact.css */
+
+.contact-form-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  /* background-color: #f9f9f9; */
+  /* 배경색 제거 */
+}
+
+.contact-form-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+#contactForm div {
+  margin-bottom: 1rem;
+}
+
+#contactForm label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="tel"],
+#contactForm select,
+#contactForm textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* Include padding and border in element's total width and height */
+  font-size: 1rem;
+}
+
+#contactForm input[type="file"] {
+  padding: 0.5rem 0;
+}
+
+#contactForm textarea {
+  resize: vertical;
+  /* Allow vertical resizing */
+  min-height: 100px;
+}
+
+#contactForm button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contactForm button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Add some spacing for better readability */
+#contactForm input:focus,
+#contactForm select:focus,
+#contactForm textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}

@@ -10,6 +10,25 @@
   <title>Software King</title>
   <link rel="canonical" href="https://cherrycoder9.github.io/contact" />
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cherrycoder9.github.io/contact" />
+  <meta property="og:title" content="Software King" />
+  <meta property="og:description"
+    content="Contact CherryCoder for inquiries, project proposals, or feedback via a secure online form." />
+  <meta property="og:image" content="https://cherrycoder9.github.io/android-chrome-512x512.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://cherrycoder9.github.io/contact" />
+  <meta property="twitter:title" content="Software King" />
+  <meta property="twitter:description"
+    content="Contact CherryCoder for inquiries, project proposals, or feedback via a secure online form." />
+  <meta property="twitter:image" content="https://cherrycoder9.github.io/android-chrome-512x512.png" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#ffffff">
+
   <!-- 기본 파비콘 -->
   <link rel="icon" href="./favicon.ico" />
 
@@ -30,6 +49,7 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/nav.css">
   <link rel="stylesheet" href="./css/aside.css">
+  <link rel="stylesheet" href="./css/contact.css"> <!-- 문의 폼 CSS 추가 -->
 
   <!-- JS -->
   <script type="module" src="./js/index.mjs" defer></script>
@@ -58,47 +78,51 @@
 
   <!-- 페이지 본문 내용, 3단 구성중 중앙 -->
   <main id="contact" class="main-content">
-    <h1>English Fun Facts You Might Not Know</h1>
-    <h2>English Fun Facts You Might Not Know</h2>
-    <p>
-      English is one of the most widely spoken languages in the world, but its origins are quite complex. It started as
-      a
-      Germanic language brought to Britain by Anglo-Saxon settlers in the 5th century. Over time, English absorbed
-      vocabulary
-      and grammar from Latin, Norse, and especially French after the Norman Conquest. That’s why many English words have
-      synonyms from different roots—like “kingly” (Germanic), “royal” (French), and “regal” (Latin). This mixed heritage
-      makes
-      English both rich and confusing.
-    </p>
-    <h3>English Fun Facts You Might Not Know</h3>
-    <p>
-      Despite being considered a global language, English has no central governing body. Unlike French or Spanish,
-      there’s no
-      official institution that decides what's “correct” English. This flexibility allows the language to evolve quickly
-      and
-      adapt to new trends. That’s why words like “selfie,” “binge-watch,” and “ghosting” have been added to dictionaries
-      in
-      recent years. English grows based on how people actually use it, not how it “should” be used.
-    </p>
-    <h4>English Fun Facts You Might Not Know</h4>
-    <p>
-      Spelling in English is notoriously inconsistent, and there’s a good reason for that. When printing became
-      widespread in
-      the 15th century, spelling wasn’t standardized, and printers often made their own choices. Later, many
-      pronunciation
-      changes didn’t reflect in the spelling—leading to weird words like “knight” or “colonel.” Even native speakers
-      struggle
-      with words like “queue” or “rhythm.” English spelling is more a museum of history than a guide to pronunciation.
-    </p>
-    <h4>English Fun Facts You Might Not Know</h4>
-    <p>
-      Finally, English has the largest vocabulary of any language—at least by some estimates. The Oxford English
-      Dictionary
-      lists over 600,000 words, not including technical terms and slang. But most native speakers only use around 20,000
-      to
-      35,000 words in daily life. Still, that gives English speakers a huge range of ways to express themselves. Whether
-      poetic or practical, English thrives on its diversity.
-    </p>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <div>
+          <label for="name">Name/Company</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="countryCode">Country Code (Optional):</label>
+          <input type="text" id="countryCode" name="countryCode" placeholder="+1">
+        </div>
+        <div>
+          <label for="phoneNumber">Phone Number (Optional):</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="1234567890">
+        </div>
+        <div>
+          <label for="inquiryType">Inquiry Type</label>
+          <select id="inquiryType" name="inquiryType" required>
+            <option value="">Select...</option>
+            <option value="business-proposal">Business Proposal</option>
+            <option value="service-inquiry">Service Inquiry</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div>
+          <label for="message">Details</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <div>
+          <label for="attachment">Attachment (Optional)</label>
+          <input type="file" id="attachment" name="attachment">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </main>
 
   <!-- 3단 구성중 가장 우측 위치, 스티키 -->
