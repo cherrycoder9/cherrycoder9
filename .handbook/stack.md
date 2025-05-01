@@ -1,4 +1,6 @@
-# Stack
+# 기술 스택 가이드라인
+
+본 문서는 프로젝트에서 사용되는 기술 스택에 대한 참고 정보를 제공합니다.
 
 ## Overview
 This project uses a minimal stack for a static website hosted on GitHub Pages.
