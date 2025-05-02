@@ -19,6 +19,8 @@
   # OpenAPI / GraphQL 스펙 – 엔드포인트·스키마·에러 모델
 - .handbook/data-model.md
   # DB ERD·인덱스·제약·마이그레이션 규칙
+- .handbook/api-optimization.md
+  # API 호출 최적화 및 비용 절감 가이드라인
 
 ### 3. 확장 (대형·프로덕션)
 - .handbook/quality.md
